@@ -4,8 +4,12 @@
   "description": "Port de plaisance reservation catways",
   "main": "server.js",
   "scripts": {
+    "start":"node server.js",
+    "dev":"nodemon server.js",
+    "import":"node importData.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "type":"module",
   "author": "alexis",
   "license": "ISC",
   "dependencies": {
