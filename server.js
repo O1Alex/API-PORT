@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
 dotenv.config();
+
 import express from "express";
 import mongoose from "mongoose";
 import userRoutes from "./routes/userRoutes.js";
@@ -35,7 +36,7 @@ mongoose
 // Configuration de la session (doit être AVANT le middleware de protection et les routes)
 app.use(
   session({
-    secret: "votre_secret_session", // À remplacer par une vraie clé secrète en prod
+    secret: "clé_secrete",
     resave: false,
     saveUninitialized: false,
     cookie: { maxAge: 1000 * 60 * 60 * 8 }, // 8h
